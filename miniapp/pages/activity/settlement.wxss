@@ -1,0 +1,23 @@
+.section-title,
+.label {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 900;
+  margin-bottom: 16rpx;
+}
+
+.member-line,
+.expense-line,
+.settlement-line {
+  align-items: center;
+  border-bottom: 1rpx solid #eef2f1;
+  display: flex;
+  justify-content: space-between;
+  min-height: 74rpx;
+}
+
+.expense-line text:last-child,
+.settlement-line text:last-child {
+  color: #0d5c63;
+  font-weight: 900;
+}

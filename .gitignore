@@ -1,0 +1,13 @@
+target/
+dist/
+node_modules/
+.npm-cache/
+.m2/
+maven-repo/
+.idea/
+.vscode/
+*.log
+.env
+application-local.yml
+/backend/run-dev.ps1
+/backend/run-pro.ps1

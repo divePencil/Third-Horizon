@@ -1,0 +1,46 @@
+.detail-card image {
+  height: 420rpx;
+  width: 100%;
+}
+
+.detail-body {
+  display: grid;
+  gap: 12rpx;
+  padding: 24rpx;
+}
+
+.id {
+  background: #e7f0ee;
+  border-radius: 999rpx;
+  color: #0d5c63;
+  font-size: 22rpx;
+  font-weight: 800;
+  padding: 6rpx 12rpx;
+  width: fit-content;
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: 900;
+}
+
+.summary,
+.content {
+  color: #405956;
+  font-size: 28rpx;
+  line-height: 1.7;
+}
+
+.section-title {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 900;
+  margin-bottom: 16rpx;
+}
+
+.qr {
+  border-radius: 16rpx;
+  height: 360rpx;
+  margin: 12rpx 0;
+  width: 360rpx;
+}

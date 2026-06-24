@@ -1,0 +1,21 @@
+.picker {
+  background: #f6faf8;
+  border: 1rpx solid #d7e3df;
+  border-radius: 12rpx;
+  min-height: 76rpx;
+  padding: 18rpx;
+}
+
+.preview {
+  border-radius: 16rpx;
+  height: 300rpx;
+  margin: 16rpx 0;
+  width: 100%;
+}
+
+.qr {
+  border-radius: 16rpx;
+  height: 280rpx;
+  margin: 16rpx 0;
+  width: 280rpx;
+}

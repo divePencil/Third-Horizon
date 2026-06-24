@@ -1,0 +1,27 @@
+.title {
+  display: block;
+  font-size: 38rpx;
+  font-weight: 900;
+  margin-bottom: 18rpx;
+}
+
+.mine-card {
+  padding: 24rpx;
+}
+
+.role {
+  background: #e7f0ee;
+  border-radius: 999rpx;
+  color: #0d5c63;
+  display: inline-block;
+  font-size: 22rpx;
+  font-weight: 800;
+  margin-bottom: 12rpx;
+  padding: 6rpx 12rpx;
+}
+
+.activity-title {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 900;
+}

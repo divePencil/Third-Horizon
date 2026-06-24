@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="hero">
+    <text class="eyebrow">三人成行</text>
+    <text class="title">山海活动</text>
+    <text class="subtitle">自由潜、渔猎、背包船、桨板、露营、划船</text>
+  </view>
+
+  <view wx:if="{{loading}}" class="section muted">正在加载活动...</view>
+
+  <view wx:for="{{activities}}" wx:key="id" class="card activity-card" bindtap="openDetail" data-id="{{item.id}}">
+    <image wx:if="{{item.coverUrl}}" src="{{item.coverUrl}}" mode="aspectFill" />
+    <view class="activity-body">
+      <view class="activity-head">
+        <text class="id">ID #{{item.id}}</text>
+        <text class="status">{{item.status}}</text>
+      </view>
+      <text class="activity-title">{{item.title}}</text>
+      <text class="muted">{{item.startTimeText}} - {{item.endTimeText}}</text>
+      <text class="summary">{{item.summary}}</text>
+    </view>
+  </view>
+
+  <view wx:if="{{!loading && !activities.length}}" class="section muted">暂无活动</view>
+</view>

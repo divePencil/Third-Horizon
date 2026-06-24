@@ -1,0 +1,14 @@
+[Unit]
+Description=Freediving Activity API
+After=network.target
+
+[Service]
+User=www-data
+WorkingDirectory=/opt/freediving/backend
+EnvironmentFile=/opt/freediving/backend/.env
+ExecStart=/usr/bin/java -jar /opt/freediving/backend/freediving-api.jar
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

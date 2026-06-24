@@ -1,0 +1,14 @@
+{
+  "description": "三人成行微信小程序",
+  "appid": "touristappid",
+  "projectname": "third-horizon-miniapp",
+  "miniprogramRoot": "./",
+  "compileType": "miniprogram",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  }
+}

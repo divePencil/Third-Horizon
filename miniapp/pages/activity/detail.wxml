@@ -1,0 +1,44 @@
+<view class="page">
+  <view wx:if="{{activity}}" class="card detail-card">
+    <image wx:if="{{activity.coverUrl}}" src="{{activity.coverUrl}}" mode="aspectFill" />
+    <view class="detail-body">
+      <text class="id">ID #{{activity.id}}</text>
+      <text class="title">{{activity.title}}</text>
+      <text class="muted">{{activity.startTimeText}} - {{activity.endTimeText}}</text>
+      <text class="summary">{{activity.summary}}</text>
+    </view>
+  </view>
+
+  <view wx:if="{{activity}}" class="section">
+    <text class="section-title">行程安排</text>
+    <text class="content">{{activity.itinerary || '待补充'}}</text>
+  </view>
+
+  <view wx:if="{{activity}}" class="section">
+    <text class="section-title">报名</text>
+    <label class="field">
+      <text>昵称</text>
+      <input value="{{form.nickname}}" data-field="nickname" bindinput="onInput" />
+    </label>
+    <label class="field">
+      <text>手机号</text>
+      <input value="{{form.phone}}" data-field="phone" bindinput="onInput" />
+    </label>
+    <label class="field">
+      <text>户外/水上经验</text>
+      <textarea value="{{form.experienceLevel}}" data-field="experienceLevel" bindinput="onInput" />
+    </label>
+    <button class="button-primary" bindtap="signup">提交报名</button>
+  </view>
+
+  <view wx:if="{{tempGroupQrUrl}}" class="section">
+    <text class="section-title">活动临时群</text>
+    <image class="qr" src="{{tempGroupQrUrl}}" mode="aspectFill" show-menu-by-longpress />
+    <text class="muted">长按二维码加入活动临时群</text>
+  </view>
+
+  <view wx:if="{{activity}}" class="section">
+    <button class="button-ghost" bindtap="shareActivity">分享给朋友</button>
+    <button class="button-ghost" bindtap="goSettlement">活动后算账</button>
+  </view>
+</view>

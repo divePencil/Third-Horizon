@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="section">
+    <text class="section-title">录入垫付</text>
+    <label class="field">
+      <text>费用名称</text>
+      <input value="{{form.title}}" data-field="title" bindinput="onInput" />
+    </label>
+    <label class="field">
+      <text>垫付金额（元）</text>
+      <input type="digit" value="{{form.amount}}" data-field="amount" bindinput="onInput" />
+    </label>
+    <label class="field">
+      <text>说明</text>
+      <textarea value="{{form.note}}" data-field="note" bindinput="onInput" />
+    </label>
+    <text class="label">与谁 AA</text>
+    <checkbox-group bindchange="onShareChange">
+      <label wx:for="{{members}}" wx:key="id" class="member-line">
+        <checkbox value="{{item.userId}}" checked="{{selectedMap[item.userId]}}" />
+        <text>成员 #{{item.userId}} {{item.role}}</text>
+      </label>
+    </checkbox-group>
+    <button class="button-primary" bindtap="submitExpense">保存垫付</button>
+  </view>
+
+  <view class="section">
+    <text class="section-title">费用记录</text>
+    <view wx:for="{{expenses}}" wx:key="expense.id" class="expense-line">
+      <text>{{item.expense.title}}</text>
+      <text>¥{{item.amountText}}</text>
+    </view>
+    <button class="button-ghost" bindtap="generate">生成结算方案</button>
+  </view>
+
+  <view wx:if="{{settlement}}" class="section">
+    <text class="section-title">结算方案</text>
+    <view wx:if="{{!settlement.items.length}}" class="muted">当前无需转账</view>
+    <view wx:for="{{settlement.items}}" wx:key="id" class="settlement-line">
+      <text>成员 #{{item.fromUserId}} 转给 成员 #{{item.toUserId}}</text>
+      <text>¥{{item.amountText}}</text>
+    </view>
+  </view>
+</view>
